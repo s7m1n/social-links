@@ -12,7 +12,10 @@ export default function Home() {
           playsInline
           className="w-full h-full object-cover opacity-50"
         >
-          <source src="/background.mp4" type="video/mp4" />
+          <source 
+            src="https://res.cloudinary.com/dnsovapxr/video/upload/v1748617072/background_st0zbz.mp4" 
+            type="video/mp4"
+          />
         </video>
         {/* Overlay for better text visibility */}
         <div className="absolute inset-0 bg-black/50"></div>
