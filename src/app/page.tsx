@@ -2,16 +2,32 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-black flex items-center justify-center">
-      <div className="p-8 rounded-xl bg-black border border-white/20 shadow-[0_0_15px_rgba(255,255,255,0.1)] flex flex-col gap-8 items-center">
-        <h1 className="text-white text-3xl font-bold mb-4">s7m1n_</h1>
+    <div className="min-h-screen bg-black flex items-center justify-center relative overflow-hidden">
+      {/* Video Background */}
+      <div className="absolute inset-0 w-full h-full">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover opacity-50"
+        >
+          <source src="/background.mp4" type="video/mp4" />
+        </video>
+        {/* Overlay for better text visibility */}
+        <div className="absolute inset-0 bg-black/50"></div>
+      </div>
+
+      {/* Content */}
+      <div className="p-8 rounded-xl bg-black/30 backdrop-blur-sm border border-white/60 shadow-[0_0_40px_rgba(255,255,255,0.4)] flex flex-col gap-8 items-center hover:shadow-[0_0_70px_rgba(255,255,255,0.6)] transition-all duration-500 relative z-10">
+        <h1 className="text-white text-3xl font-bold mb-4 text-shadow-glow">s7m1n_</h1>
         
         <div className="flex flex-col gap-6 w-full">
           <a
             href="https://www.instagram.com/s7m1n_/"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-4 p-4 rounded-lg bg-black border border-white/10 hover:border-white/30 transition-all hover:shadow-[0_0_10px_rgba(255,255,255,0.1)]"
+            className="flex items-center gap-4 p-4 rounded-lg bg-black/50 backdrop-blur-sm border border-white/40 hover:border-white/80 transition-all hover:shadow-[0_0_30px_rgba(255,255,255,0.4)] transform hover:scale-105"
           >
             <Image
               src="/instagram.svg"
@@ -23,7 +39,7 @@ export default function Home() {
             <span className="text-white">Instagram</span>
           </a>
 
-          <div className="flex items-center gap-4 p-4 rounded-lg bg-black border border-white/10 hover:border-white/30 transition-all hover:shadow-[0_0_10px_rgba(255,255,255,0.1)]">
+          <div className="flex items-center gap-4 p-4 rounded-lg bg-black/50 backdrop-blur-sm border border-white/40 hover:border-white/80 transition-all hover:shadow-[0_0_30px_rgba(255,255,255,0.4)] transform hover:scale-105">
             <Image
               src="/discord.svg"
               alt="Discord"
@@ -38,7 +54,7 @@ export default function Home() {
             href="https://www.tiktok.com/@0j4u"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-4 p-4 rounded-lg bg-black border border-white/10 hover:border-white/30 transition-all hover:shadow-[0_0_10px_rgba(255,255,255,0.1)]"
+            className="flex items-center gap-4 p-4 rounded-lg bg-black/50 backdrop-blur-sm border border-white/40 hover:border-white/80 transition-all hover:shadow-[0_0_30px_rgba(255,255,255,0.4)] transform hover:scale-105"
           >
             <Image
               src="/tiktok.svg"
