@@ -4,25 +4,25 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-black flex items-center justify-center relative overflow-hidden">
       {/* Video Background */}
-      <div className="absolute inset-0 w-full h-full">
+      <div className="fixed inset-0 w-full h-full -z-10">
         <video
           autoPlay
           loop
           muted
           playsInline
-          className="w-full h-full object-cover opacity-50"
+          className="absolute top-0 left-0 w-full h-full object-cover"
         >
           <source 
-            src="https://res.cloudinary.com/dnsovapxr/video/upload/v1748617072/background_st0zbz.mp4" 
+            src="https://res.cloudinary.com/dnsovapxr/video/upload/v1748617072/background_st0zbz.mp4"
             type="video/mp4"
           />
         </video>
-        {/* Overlay for better text visibility */}
-        <div className="absolute inset-0 bg-black/50"></div>
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black/70"></div>
       </div>
 
       {/* Content */}
-      <div className="p-8 rounded-xl bg-black/30 backdrop-blur-sm border border-white/60 shadow-[0_0_40px_rgba(255,255,255,0.4)] flex flex-col gap-8 items-center hover:shadow-[0_0_70px_rgba(255,255,255,0.6)] transition-all duration-500 relative z-10">
+      <div className="p-8 rounded-xl bg-black/30 backdrop-blur-sm border border-white/60 shadow-[0_0_40px_rgba(255,255,255,0.4)] flex flex-col gap-8 items-center hover:shadow-[0_0_70px_rgba(255,255,255,0.6)] transition-all duration-500 z-10">
         <h1 className="text-white text-3xl font-bold mb-4 text-shadow-glow">s7m1n_</h1>
         
         <div className="flex flex-col gap-6 w-full">
